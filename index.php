@@ -14,6 +14,14 @@
     
     $serie_1 = new Tv("Friends","Commedia");
     $serie_1->season=10;
+    $serie_1->start=1994;
+    $serie_1->end=2004;
+
+    $serie_2 = new Tv("Lost","Avventura");
+    $serie_2->season=6;
+    $serie_2->start=2004;
+    $serie_2->end=2010;
+
 
     
 ?>
@@ -27,23 +35,32 @@
     <title>PHP_Opp</title>
 </head>
 <body>
-    <h1>Film 1</h1>
+    <h1>Film</h1>
     <h3>Title : <?php echo $film_1->title ?> , Duration: <?php echo $film_1->duration ?>min , Genre: <?php echo $film_1->genre ?></h3>
     <h4><?php echo $film_1->getInfo() ?></h4>
     <h5>Prezzo: <?php echo $film_1->getPrice()?>€ </h5>
-
-    <h1>Film 2</h1>
+    
+    <br>
 
     <h3>Title : <?php echo $film_2->title ?> , Duration: <?php echo $film_2->duration ?>min , Genre: <?php echo $film_2->genre ?></h3>
     <h4><?php echo $film_2->getInfo() ?></h4>
     <h5>Prezzo: <?php echo $film_2->getPrice()?>€ </h5>
 
     <h4>Il contatore è: <?php echo Movie::getCounter() ?></h4>
-    <br>
+    <hr>
 
     <h1>Serie-TV</h1>
 
-    <h3>Title: <?php echo $serie_1->title ?></h3>
+    <h3>Title: <?php echo $serie_1->title ?>, Genre: <?php echo $serie_1->genre ?></h3>
+    <h4>Seasons: <?php echo $serie_1->season ?></h4>
+    <h5><?php echo $serie_1->getDate()?></h5>
+
+    <br>
+
+    <h3>Title: <?php echo $serie_2->title ?>, Genre: <?php echo $serie_2->genre ?></h3>
+    <h4>Seasons: <?php echo $serie_2->season ?></h4>
+    <h5><?php echo $serie_2->getDate()?></h5>
+
 
 </body>
-</html>
+</html
